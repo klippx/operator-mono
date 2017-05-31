@@ -1,7 +1,7 @@
 {
   "name": "operator-mono",
   "theme": "syntax",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Atom syntax theme for Operator Mono (and friends)",
   "keywords": [
     "syntax",
@@ -12,7 +12,7 @@
     "oceanic next",
     "oceanic next italic"
   ],
-  "repository": "https://github.com/klippx/operator-mono-syntax",
+  "repository": "https://github.com/klippx/operator-mono",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
