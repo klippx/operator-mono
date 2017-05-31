@@ -20,9 +20,9 @@
 
 // Gutter colors
 @syntax-gutter-text-color: @very-light-gray;
-@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-@syntax-gutter-background-color: @dark-gray;
-@syntax-gutter-background-color-selected: @gray;
+@syntax-gutter-text-color-selected: lighten(@very-light-gray, 5%);
+@syntax-gutter-background-color: darken(@graphite, 5%);
+@syntax-gutter-background-color-selected: lighten(@graphite, 5%);
 
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed: @blue;
