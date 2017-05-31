@@ -1,5 +1,5 @@
 {
-  "name": "operator-mono-syntax",
+  "name": "operator-mono",
   "theme": "syntax",
   "version": "0.1.0",
   "description": "Atom syntax theme for Operator Mono (and friends)",
