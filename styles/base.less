@@ -59,9 +59,9 @@ atom-text-editor {
 
 
 // Syntax styles
-
 .syntax--comment {
   color: @light-gray;
+  font-style: italic;
 }
 
 .syntax--keyword {
@@ -109,14 +109,10 @@ atom-text-editor {
 }
 
 .syntax--variable {
-  color: @oceanic-next-red;
+  color: @syntax-text-color;
 
   &.syntax--interpolation {
-    color: darken(@oceanic-next-red, 10%);
-  }
-
-  &.syntax--parameter.syntax--function {
-    color: @syntax-text-color;
+    color: darken(@syntax-text-color, 10%);
   }
 }
 
@@ -144,17 +140,15 @@ atom-text-editor {
 
 .syntax--punctuation {
   &.syntax--definition {
-    &.syntax--comment {
-      color: @light-gray;
-    }
-
     &.syntax--string,
     &.syntax--variable,
-    &.syntax--parameters,
     &.syntax--array {
-      color: @syntax-text-color;
+      color: @syntax-string-quote;
     }
 
+    &.syntax--parameters {
+      color: @syntax-parameters;
+    }
     &.syntax--heading,
     &.syntax--identity {
       color: @oceanic-next-blue;
@@ -183,7 +177,7 @@ atom-text-editor {
   }
 
   &.syntax--function  {
-    color: @oceanic-next-cyan;
+    color: @oceanic-next-blue;
 
     &.syntax--any-method {
       color: @oceanic-next-blue;
@@ -228,6 +222,10 @@ atom-text-editor {
 .syntax--meta {
   &.syntax--class {
     color: @light-orange;
+  }
+
+  &.syntax--brace.syntax--curly.syntax--litobj {
+    color: @syntax-curly;
   }
 
   &.syntax--link {
