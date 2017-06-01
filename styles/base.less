@@ -89,7 +89,7 @@ atom-text-editor {
 }
 
 .syntax--constant {
-  color: @orange;
+  color: @syntax-constant;
 
   &.syntax--character.syntax--escape {
     color: @oceanic-next-cyan;
@@ -105,14 +105,6 @@ atom-text-editor {
 
   &.syntax--other.syntax--symbol {
     color: @oceanic-next-green;
-  }
-}
-
-.syntax--variable {
-  color: @syntax-text-color;
-
-  &.syntax--interpolation {
-    color: darken(@syntax-text-color, 10%);
   }
 }
 
@@ -222,9 +214,17 @@ atom-text-editor {
 .syntax--meta {
   &.syntax--class {
     color: @light-orange;
+
+    .syntax--static {
+      color: @syntax-constant;
+    }
   }
 
   &.syntax--brace.syntax--curly.syntax--litobj {
+    color: @syntax-curly;
+  }
+
+  &.syntax--brace.syntax--square {
     color: @syntax-curly;
   }
 
