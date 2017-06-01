@@ -134,10 +134,12 @@ atom-text-editor {
   &.syntax--definition {
     &.syntax--string,
     &.syntax--variable,
+    &.syntax--quasi,
     &.syntax--array {
       color: @syntax-string-quote;
     }
 
+    &.syntax--tag,
     &.syntax--parameters {
       color: @syntax-parameters;
     }
@@ -158,9 +160,8 @@ atom-text-editor {
   }
 
   &.syntax--section.syntax--embedded {
-    color: darken(@oceanic-next-red, 10%);
+    color: @syntax-curly;
   }
-
 }
 
 .syntax--support {
@@ -181,14 +182,15 @@ atom-text-editor {
   &.syntax--name.syntax--function {
     color: @oceanic-next-blue;
   }
+
   &.syntax--name.syntax--type {
     color: @light-orange;
-    text-decoration: underline;
   }
 
   &.syntax--other.syntax--inherited-class {
     color: @oceanic-next-green;
   }
+
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     color: @light-orange;
   }
@@ -197,13 +199,8 @@ atom-text-editor {
     color: @oceanic-next-blue;
   }
 
-  &.syntax--name.syntax--tag {
-    color: @oceanic-next-red;
-    text-decoration: underline;
-  }
-
   &.syntax--other.syntax--attribute-name {
-    color: @orange;
+    color: @oceanic-next-dark-purple;
 
     &.syntax--id {
       color: @oceanic-next-blue;
@@ -212,20 +209,27 @@ atom-text-editor {
 }
 
 .syntax--meta {
-  &.syntax--class {
-    color: @light-orange;
+  .syntax--this {
+    font-style: italic;
+    color: @oceanic-next-red;
+  }
 
-    .syntax--static {
-      color: @syntax-constant;
+  &.syntax--class {
+    .syntax--variable.syntax--class {
+      color: @orange;
+    }
+
+    .syntax--variable.syntax--property {
+      color: @syntax-text-color;
     }
   }
 
-  &.syntax--brace.syntax--curly.syntax--litobj {
-    color: @syntax-curly;
-  }
+  &.syntax--brace {
+    color: @syntax-parameters;
 
-  &.syntax--brace.syntax--square {
-    color: @syntax-curly;
+    .syntax--curly, .syntax--square {
+      color: @syntax-curly;
+    }
   }
 
   &.syntax--link {
