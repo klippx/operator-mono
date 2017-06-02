@@ -1,7 +1,7 @@
 {
   "name": "operator-mono",
   "theme": "syntax",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Atom syntax theme for Operator Mono (and friends)",
   "keywords": [
     "syntax",
