@@ -65,7 +65,14 @@ atom-text-editor {
 }
 
 .syntax--keyword {
-  &.syntax--operator {
+  &.syntax--operator.syntax--accessor {
+    color: @syntax-delimiter;
+  }
+
+  &.syntax--operator.syntax--arrow,
+  &.syntax--operator.syntax--comparison,
+  &.syntax--operator.syntax--relational,
+  &.syntax--operator.syntax--assignment, {
     color: @syntax-operator;
   }
 
@@ -126,7 +133,12 @@ atom-text-editor {
 
 
   &.syntax--regexp {
-    color: @oceanic-next-cyan;
+    color: @orange;
+
+    .syntax--punctuation.syntax--definition.syntax--begin,
+    .syntax--punctuation.syntax--definition.syntax--end {
+      color: @red;
+    }
 
     .syntax--source.syntax--ruby.syntax--embedded {
       color: @orange;
@@ -222,10 +234,13 @@ atom-text-editor {
     color: @oceanic-next-red;
   }
 
+  .syntax--delimiter {
+    color: @syntax-delimiter;
+  }
+
   .syntax--variable {
     &.syntax--other.syntax--object {
       color: @syntax-object;
-      font-style: italic;
     }
     &.syntax--other.syntax--readwrite {
       color: @variable;
