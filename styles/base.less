@@ -236,14 +236,24 @@ atom-text-editor {
   }
 }
 
+.syntax--punctuation.syntax--key-value,
+.syntax--delimiter {
+  color: @syntax-delimiter;
+}
+
 .syntax--meta {
   .syntax--this {
     font-style: italic;
     color: @oceanic-next-red;
   }
 
+  .syntax--punctuation.syntax--key-value,
   .syntax--delimiter {
     color: @syntax-delimiter;
+  }
+
+  .syntax--entity.syntax--name.syntax--tag {
+    color: @syntax-class;
   }
 
   .syntax--variable {
