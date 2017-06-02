@@ -65,12 +65,12 @@ atom-text-editor {
 }
 
 .syntax--keyword {
-  &.syntax--control {
-    color: @syntax-keyword;
+  &.syntax--operator {
+    color: @syntax-operator;
   }
 
-  &.syntax--operator {
-    color: @syntax-text-color;
+  &.syntax--control {
+    color: @syntax-keyword;
   }
 
   &.syntax--other.syntax--special-method {
@@ -83,7 +83,17 @@ atom-text-editor {
 }
 
 .syntax--storage {
-  color: @syntax-storage;
+  &.syntax--type {
+    color: @syntax-storage;
+  }
+
+  &.syntax--arrow {
+    color: @syntax-operator;
+  }
+
+  &.syntax--class, &.syntax--extends {
+    color: @syntax-storage;
+  }
 }
 
 .syntax--constant {
@@ -152,7 +162,6 @@ atom-text-editor {
     }
 
     &.syntax--italic {
-      color: @oceanic-next-purple;
       font-style: italic;
     }
   }
@@ -198,7 +207,8 @@ atom-text-editor {
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: @oceanic-next-purple;
+    color: @syntax-attribute;
+    font-style: italic;
 
     &.syntax--id {
       color: @oceanic-next-blue;
@@ -220,11 +230,15 @@ atom-text-editor {
     .syntax--method {
       color: @function-call;
     }
+
+    .syntax--class {
+      color: @syntax-class;
+    }
   }
 
   &.syntax--class {
     .syntax--variable.syntax--class {
-      color: @orange;
+      color: @syntax-class;
     }
 
     .syntax--variable.syntax--property {
@@ -277,7 +291,6 @@ atom-text-editor {
   }
 
   &.syntax--italic {
-    color: @oceanic-next-purple;
     font-style: italic;
   }
 
