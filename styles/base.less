@@ -65,10 +65,8 @@ atom-text-editor {
 }
 
 .syntax--keyword {
-  color: @oceanic-next-dark-purple;
-
   &.syntax--control {
-    color: @oceanic-next-dark-purple;
+    color: @syntax-keyword;
   }
 
   &.syntax--operator {
@@ -85,7 +83,7 @@ atom-text-editor {
 }
 
 .syntax--storage {
-  color: @oceanic-next-dark-purple;
+  color: @syntax-storage;
 }
 
 .syntax--constant {
@@ -154,7 +152,7 @@ atom-text-editor {
     }
 
     &.syntax--italic {
-      color: @oceanic-next-dark-purple;
+      color: @oceanic-next-purple;
       font-style: italic;
     }
   }
@@ -170,17 +168,17 @@ atom-text-editor {
   }
 
   &.syntax--function  {
-    color: @oceanic-next-blue;
+    color: @function-call;
 
     &.syntax--any-method {
-      color: @oceanic-next-blue;
+      color: @function-call;
     }
   }
 }
 
 .syntax--entity {
   &.syntax--name.syntax--function {
-    color: @oceanic-next-blue;
+    color: @function-call;
   }
 
   &.syntax--name.syntax--type {
@@ -200,7 +198,7 @@ atom-text-editor {
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: @oceanic-next-dark-purple;
+    color: @oceanic-next-purple;
 
     &.syntax--id {
       color: @oceanic-next-blue;
@@ -212,6 +210,16 @@ atom-text-editor {
   .syntax--this {
     font-style: italic;
     color: @oceanic-next-red;
+  }
+
+  .syntax--variable.syntax--other.syntax--readwrite {
+    color: @variable;
+  }
+
+  &.syntax--method-call {
+    .syntax--method {
+      color: @function-call;
+    }
   }
 
   &.syntax--class {
@@ -241,7 +249,7 @@ atom-text-editor {
   }
 
   &.syntax--selector {
-    color: @oceanic-next-dark-purple;
+    color: @oceanic-next-purple;
   }
 
   &.syntax--separator {
@@ -261,7 +269,7 @@ atom-text-editor {
   }
 
   &.syntax--changed {
-    color: @oceanic-next-dark-purple;
+    color: @oceanic-next-purple;
   }
 
   &.syntax--deleted {
@@ -269,7 +277,7 @@ atom-text-editor {
   }
 
   &.syntax--italic {
-    color: @oceanic-next-dark-purple;
+    color: @oceanic-next-purple;
     font-style: italic;
   }
 
