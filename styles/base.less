@@ -98,6 +98,11 @@ atom-text-editor {
 }
 
 .syntax--storage {
+  &.syntax--modifier {
+    color: @red;
+    font-style: italic;
+  }
+
   &.syntax--type {
     color: @syntax-storage;
   }
@@ -197,10 +202,10 @@ atom-text-editor {
   }
 
   &.syntax--function  {
-    color: @function-call;
+    color: @syntax-function-call;
 
     &.syntax--any-method {
-      color: @function-call;
+      color: @syntax-function-call;
     }
   }
 }
@@ -208,7 +213,7 @@ atom-text-editor {
 .syntax--entity {
   &.syntax--name.syntax--accessor,
   &.syntax--name.syntax--function {
-    color: @function-call;
+    color: @syntax-function-call;
   }
 
   &.syntax--name.syntax--type {
@@ -262,17 +267,17 @@ atom-text-editor {
   .syntax--variable {
     &.syntax--other.syntax--object,
     &.syntax--other.syntax--readwrite {
-      color: @variable;
+      color: @syntax-variable;
 
       &.syntax--instance.syntax--ruby {
-        color: @function-call;
+        color: @syntax-function-call;
       }
     }
   }
 
   &.syntax--method-call {
     .syntax--method {
-      color: @function-call;
+      color: @syntax-function-call;
     }
 
     .syntax--class {
