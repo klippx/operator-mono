@@ -145,7 +145,7 @@ atom-text-editor {
 
     .syntax--punctuation.syntax--definition.syntax--begin,
     .syntax--punctuation.syntax--definition.syntax--end {
-      color: @red;
+      color: @oceanic-next-red-dark;
     }
 
     .syntax--source.syntax--ruby.syntax--embedded {
@@ -206,6 +206,7 @@ atom-text-editor {
 }
 
 .syntax--entity {
+  &.syntax--name.syntax--accessor,
   &.syntax--name.syntax--function {
     color: @function-call;
   }
@@ -218,7 +219,8 @@ atom-text-editor {
     color: @oceanic-next-green;
   }
 
-  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type.syntax--class {
     color: @light-orange;
   }
 
@@ -248,18 +250,17 @@ atom-text-editor {
   }
 
   .syntax--punctuation.syntax--key-value,
+  .syntax--tag,
   .syntax--delimiter {
     color: @syntax-delimiter;
   }
 
   .syntax--entity.syntax--name.syntax--tag {
-    color: @syntax-class;
+    color: @syntax-tag;
   }
 
   .syntax--variable {
-    &.syntax--other.syntax--object {
-      color: @syntax-object;
-    }
+    &.syntax--other.syntax--object,
     &.syntax--other.syntax--readwrite {
       color: @variable;
 
