@@ -222,8 +222,14 @@ atom-text-editor {
     color: @oceanic-next-red;
   }
 
-  .syntax--variable.syntax--other.syntax--readwrite {
-    color: @variable;
+  .syntax--variable {
+    &.syntax--other.syntax--object {
+      color: @syntax-object;
+      font-style: italic;
+    }
+    &.syntax--other.syntax--readwrite {
+      color: @variable;
+    }
   }
 
   &.syntax--method-call {
