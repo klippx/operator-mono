@@ -3,6 +3,7 @@
 atom-text-editor {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
   &.editor .syntax--string.syntax--quoted,
   &.editor .syntax--string.syntax--regexp {
     -webkit-font-feature-settings: "liga" off, "calt" off;
@@ -251,6 +252,10 @@ atom-text-editor {
     }
     &.syntax--other.syntax--readwrite {
       color: @variable;
+
+      &.syntax--instance.syntax--ruby {
+        color: @function-call;
+      }
     }
   }
 
@@ -342,6 +347,13 @@ atom-text-editor {
     color: @oceanic-next-green;
   }
 }
+
+.syntax--variable {
+  &.syntax--other.syntax--readwrite.syntax--instance.syntax--ruby {
+    color: @syntax-ruby-instance-variable;
+  }
+}
+
 
 .syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
