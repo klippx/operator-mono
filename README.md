@@ -8,9 +8,10 @@ A syntax theme for Operator Mono and friends based on [Oceanic Next](http://labs
 
 ## Screenshots
 
-![Screenshot](img/with_fira_code_and_space_mono.png)
+![Screenshot](https://cloud.githubusercontent.com/assets/2785359/26754099/3d42e1f8-4874-11e7-8cb5-aad5f46ad074.png)
 
-![Screenshot](img/ligatures.png)
+![Screenshot](https://cloud.githubusercontent.com/assets/2785359/26754104/5782edba-4874-11e7-973f-9ed9316f77e0.png)
 
 Font: Fira code
+
 Alternative font: Space Mono (see [this repo](https://github.com/klippx/operator-mono-atom) how to enable alternative fonts)
