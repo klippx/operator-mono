@@ -61,7 +61,7 @@ atom-text-editor {
 
 // Comments
 .syntax--comment {
-  color: @syntax--comment;
+  color: @syntax-comment;
   font-style: italic;
 }
 
@@ -73,6 +73,10 @@ atom-text-editor {
 // Strings, regex, links
 .syntax--string {
   color: @oceanic-next-green;
+
+  &.syntax--unquoted {
+    color: @syntax-string-json-key;
+  }
 
   &.syntax--regexp {
     color: @orange;
@@ -128,16 +132,19 @@ atom-text-editor {
 
 // Keywords and operators, (comparison, relational, assignment etc.)
 .syntax--keyword {
-  &.syntax--operator.syntax--accessor {
-    color: @syntax-delimiter;
-  }
-
   &.syntax--operator.syntax--arrow,
   &.syntax--operator.syntax--comparison,
   &.syntax--operator.syntax--relational,
-  &.syntax--operator.syntax--spread,
-  &.syntax--operator.syntax--assignment, {
+  &.syntax--operator.syntax--spread {
     color: @syntax-operator;
+  }
+
+  &.syntax--operator.syntax--assignment {
+    color: @syntax-assignment;
+  }
+
+  &.syntax--operator.syntax--accessor {
+    color: @syntax-delimiter;
   }
 
   &.syntax--control {
@@ -185,8 +192,8 @@ atom-text-editor {
 }
 
 .syntax--support {
-  &.syntax--class {
-    color: @light-orange;
+  &.syntax--component {
+    color: @syntax-component;
   }
 
   &.syntax--function  {
@@ -201,7 +208,7 @@ atom-text-editor {
 .syntax--entity {
   &.syntax--name.syntax--accessor,
   &.syntax--name.syntax--function {
-    color: @syntax-text-color;
+    color: @syntax-function-call;
   }
 
   &.syntax--name.syntax--type {
@@ -239,7 +246,7 @@ atom-text-editor {
 .syntax--meta {
   .syntax--this {
     font-style: italic;
-    color: @oceanic-next-red;
+    color: @syntax-this;
   }
 
   .syntax--punctuation.syntax--key-value,
@@ -322,12 +329,14 @@ atom-text-editor {
     color: @syntax-text-color;
   }
   .syntax--variable.syntax--other.syntax--object {
+    color: @syntax-text-color;
   }
 
   // module.exports
   &.syntax--support.syntax--module {
+    color: @syntax-text-color;
     .syntax--keyword.syntax--operator.syntax--accessor {
-      color: @orange;
+      color: @light-orange;
     }
   }
 
