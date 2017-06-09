@@ -192,6 +192,17 @@ atom-text-editor {
 }
 
 .syntax--support {
+  // module.exports
+  &.syntax--module {
+    color: @syntax-text-color;
+    .syntax--keyword.syntax--operator.syntax--accessor {
+      color: @light-orange;
+    }
+  }
+  &.syntax--process {
+    color: @light-orange;
+  }
+
   &.syntax--component {
     color: @syntax-component;
   }
@@ -330,14 +341,6 @@ atom-text-editor {
   }
   .syntax--variable.syntax--other.syntax--object {
     color: @syntax-text-color;
-  }
-
-  // module.exports
-  &.syntax--support.syntax--module {
-    color: @syntax-text-color;
-    .syntax--keyword.syntax--operator.syntax--accessor {
-      color: @light-orange;
-    }
   }
 
   &.syntax--storage {
