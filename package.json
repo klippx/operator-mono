@@ -1,7 +1,7 @@
 {
   "name": "operator-mono",
   "theme": "syntax",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Oceanic Next syntax theme for Operator Mono, Fira Code (and friends)",
   "keywords": [
     "syntax",
