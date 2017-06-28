@@ -187,7 +187,11 @@ atom-text-editor {
   }
 
   &.syntax--other.syntax--symbol {
-    color: @oceanic-next-green;
+    color: @syntax-symbol;
+
+    .syntax--constant {
+      color: @syntax-symbol-colon;
+    }
   }
 }
 
