@@ -1,4 +1,4 @@
-@import "syntax-variables";
+@import 'syntax-variables';
 
 atom-text-editor {
   -webkit-font-smoothing: antialiased;
@@ -6,7 +6,7 @@ atom-text-editor {
 
   &.editor .syntax--string.syntax--quoted,
   &.editor .syntax--string.syntax--regexp {
-    -webkit-font-feature-settings: "liga" off, "calt" off;
+    -webkit-font-feature-settings: 'liga' off, 'calt' off;
   }
 
   background-color: @syntax-background-color;
@@ -128,6 +128,10 @@ atom-text-editor {
   &.syntax--section {
     color: @syntax-curly;
   }
+
+  &.syntax--inheritance {
+    color: @syntax-operator;
+  }
 }
 
 // Keywords and operators, (comparison, relational, assignment etc.)
@@ -211,7 +215,7 @@ atom-text-editor {
     color: @syntax-component;
   }
 
-  &.syntax--function  {
+  &.syntax--function {
     color: @syntax-function-call;
 
     &.syntax--any-method {
@@ -230,9 +234,9 @@ atom-text-editor {
     color: @light-orange;
   }
 
-  &.syntax--other.syntax--inherited-class {
-    color: @oceanic-next-green;
-  }
+  // &.syntax--other.syntax--inherited-class {
+  //   color: @oceanic-next-green;
+  // }
 
   &.syntax--name.syntax--class,
   &.syntax--name.syntax--type.syntax--class {
@@ -313,7 +317,8 @@ atom-text-editor {
   &.syntax--brace {
     color: @syntax-parameters;
 
-    .syntax--curly, .syntax--square {
+    .syntax--curly,
+    .syntax--square {
       color: @syntax-curly;
     }
   }
@@ -333,6 +338,21 @@ atom-text-editor {
   &.syntax--separator {
     background-color: @gray;
     color: @syntax-text-color;
+  }
+}
+
+// Ruby overrides
+.syntax--ruby {
+  &.syntax--class {
+    color: @syntax-class;
+
+    &.syntax--keyword {
+      color: @syntax-keyword;
+    }
+  }
+
+  &.syntax--punctuation.syntax--separator.syntax--namespace {
+    color: @syntax-delimiter;
   }
 }
 
@@ -361,9 +381,44 @@ atom-text-editor {
       color: @syntax-operator;
     }
 
-    &.syntax--class, &.syntax--extends {
+    &.syntax--class,
+    &.syntax--extends {
       color: @syntax-storage;
     }
+  }
+}
+
+// SQL overrides
+
+&.syntax--sql {
+  &.syntax--keyword {
+    color: @syntax-keyword;
+
+    &.syntax--conditional {
+      color: @syntax-function-call;
+    }
+  }
+
+  &.syntax--constant {
+    &.syntax--database-name {
+      color: @syntax-component;
+    }
+
+    &.syntax--table-name {
+      color: inherit;
+    }
+  }
+
+  &.syntax--operator {
+    color: @syntax-operator;
+  }
+
+  &.syntax--case {
+    color: @oceanic-next-blue;
+  }
+
+  &.syntax--storage {
+    color: @syntax-constant;
   }
 }
 
